@@ -8,10 +8,11 @@ CREATE TABLE users (
 );
 
 CREATE TABLE weight_logs (
-    id SERIAL PRIMARY KEY,
-    user_id INT REFERENCES users(id),
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nom VARCHAR(100) NOT NULL,
     date DATE NOT NULL,
     poids FLOAT NOT NULL,
+    taille FLOAT NOT NULL,
     imc FLOAT NOT NULL,
     categorie_imc VARCHAR(50) NOT NULL
 );
